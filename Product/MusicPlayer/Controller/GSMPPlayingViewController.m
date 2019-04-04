@@ -99,7 +99,7 @@
 - (void)setupDataOnce {
     self.titleLabel.text = [GSMusicPlayerTool sharedPlayer].playingSongModel.title;
     self.artistLabel.text = [GSMusicPlayerTool sharedPlayer].playingSongModel.artist;
-    self.artworkImgView.image = [GSMusicPlayerTool sharedPlayer].playingSongModel.coverImage;
+    self.artworkImgView.image = [UIImage imageWithData: [GSMusicPlayerTool sharedPlayer].playingSongModel.coverImageData];
     
     GSSongMessageModel *songMessageModel = [[GSMusicPlayerTool sharedPlayer] getSongMessageModel];
     self.totalTimeLabel.text = songMessageModel.totalTimeFormat;
@@ -109,7 +109,7 @@
     for (UIView *view in self.bgImgView.subviews) {
         [view removeFromSuperview];
     }
-    self.bgImgView.image = [GSMusicPlayerTool sharedPlayer].playingSongModel.coverImage;
+    self.bgImgView.image = self.artworkImgView.image;
     self.bgImgView.contentMode = UIViewContentModeScaleAspectFill;
     self.bgImgView.layer.masksToBounds = YES;
     UIBlurEffect *effect = [UIBlurEffect effectWithStyle:UIBlurEffectStyleDark];
