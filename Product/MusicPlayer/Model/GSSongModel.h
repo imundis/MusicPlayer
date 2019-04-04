@@ -15,6 +15,6 @@
 
 @property (copy, nonatomic) NSString *title;
 @property (copy, nonatomic) NSString *artist;
-@property (strong, nonatomic) UIImage *coverImage;
+@property (strong, nonatomic) NSData *coverImageData;
 
 @end
