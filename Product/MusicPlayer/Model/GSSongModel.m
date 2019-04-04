@@ -32,7 +32,7 @@
             }
             if ([metadata.commonKey isEqualToString:@"artwork"]) {
 //                NSLog(@"%@", metadata.value);
-                self.coverImage = [UIImage imageWithData:(NSData *)metadata.value];//提取图片
+                self.coverImageData = (NSData *)metadata.value;//提取图片信息
             }
         }
     }
