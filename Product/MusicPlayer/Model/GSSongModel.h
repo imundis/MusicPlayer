@@ -13,8 +13,8 @@
 
 @property (copy, nonatomic) NSString *songPath;
 
-@property (strong, nonatomic) NSString *title;
-@property (strong, nonatomic) NSString *artist;
+@property (copy, nonatomic) NSString *title;
+@property (copy, nonatomic) NSString *artist;
 @property (strong, nonatomic) UIImage *coverImage;
 
 @end
